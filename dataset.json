@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "name": "Les Mystérieuses Cités d'Or",
+    "description": "Esteban, un jeune garçon orphelin, part à la recherche des légendaires Cités d'Or en Amérique du Sud accompagné de Zia et Tao.",
+    "nb_of_episodes": 39,
+    "nb_of_seasons": 1,
+    "genres": ["Aventure", "Historique", "Fantastique"],
+    "realisator": "Bernard Deyriès",
+    "author": "Jean Chalopin",
+    "ft_diffusion": "1982-06-28",
+    "personnages": [
+      {
+        "id": 1,
+        "name": "Esteban",
+        "role": "friend",
+        "short_description": "Jeune garçon orphelin à la recherche des Cités d'Or."
+      },
+      {
+        "id": 2,
+        "name": "Zia",
+        "role": "friend",
+        "short_description": "Jeune fille inca ayant la clé des Cités d'Or."
+      },
+      {
+        "id": 3,
+        "name": "Tao",
+        "role": "friend",
+        "short_description": "Dernier descendant du peuple de Mu."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ulysse 31",
+    "description": "Ulysse se perd dans l'espace avec son équipage et cherche à rentrer sur Terre tout en affrontant les dieux de l'Olympe.",
+    "nb_of_episodes": 26,
+    "nb_of_seasons": 1,
+    "genres": ["Science-fiction", "Mythologie", "Aventure"],
+    "realisator": "Bernard Deyriès",
+    "author": "Jean Chalopin",
+    "ft_diffusion": "1981-10-03",
+    "personnages": [
+      {
+        "id": 4,
+        "name": "Ulysse",
+        "role": "friend",
+        "short_description": "Héros de l’histoire cherchant à retrouver la Terre."
+      },
+      {
+        "id": 5,
+        "name": "Télémaque",
+        "role": "friend",
+        "short_description": "Fils d'Ulysse, courageux et intrépide."
+      },
+      {
+        "id": 6,
+        "name": "Numéro Nono",
+        "role": "friend",
+        "short_description": "Petit robot assistant fidèle d’Ulysse."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dragon Ball",
+    "description": "Son Goku, un jeune garçon doté d'une force incroyable, part à la recherche des Dragon Balls, des boules de cristal magiques.",
+    "nb_of_episodes": 153,
+    "nb_of_seasons": 5,
+    "genres": ["Aventure", "Action", "Fantastique"],
+    "realisator": "Daisuke Nishio",
+    "author": "Akira Toriyama",
+    "ft_diffusion": "1986-02-26",
+    "personnages": [
+      {
+        "id": 7,
+        "name": "Son Goku",
+        "role": "friend",
+        "short_description": "Jeune garçon fort et naïf à la recherche des Dragon Balls."
+      },
+      {
+        "id": 8,
+        "name": "Bulma",
+        "role": "friend",
+        "short_description": "Jeune scientifique cherchant aussi les Dragon Balls."
+      },
+      {
+        "id": 9,
+        "name": "Pilaf",
+        "role": "ennemi",
+        "short_description": "Petit empereur malicieux voulant s'emparer des Dragon Balls."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Olive et Tom",
+    "description": "Olivier Atton rêve de devenir le meilleur joueur de football du monde et affronte de nombreux rivaux tout au long de son parcours.",
+    "nb_of_episodes": 128,
+    "nb_of_seasons": 4,
+    "genres": ["Sport", "Aventure", "Action"],
+    "realisator": "Hiroyoshi Mitsunobu",
+    "author": "Yoichi Takahashi",
+    "ft_diffusion": "1983-10-13",
+    "personnages": [
+      {
+        "id": 10,
+        "name": "Olivier Atton",
+        "role": "friend",
+        "short_description": "Jeune prodige du football passionné et déterminé."
+      },
+      {
+        "id": 11,
+        "name": "Thomas Price",
+        "role": "friend",
+        "short_description": "Gardien de but talentueux et rival d'Olivier."
+      },
+      {
+        "id": 12,
+        "name": "Mark Landers",
+        "role": "ennemi",
+        "short_description": "Attaquant redoutable et adversaire principal d'Olivier."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Nicky Larson",
+    "description": "Nicky Larson, un détective privé et garde du corps, résout des affaires tout en protégeant les innocents.",
+    "nb_of_episodes": 140,
+    "nb_of_seasons": 4,
+    "genres": ["Action", "Comédie", "Policier"],
+    "realisator": "Kenji Kodama",
+    "author": "Tsukasa Hojo",
+    "ft_diffusion": "1987-04-06",
+    "personnages": [
+      {
+        "id": 13,
+        "name": "Nicky Larson",
+        "role": "friend",
+        "short_description": "Détective privé aux compétences exceptionnelles."
+      },
+      {
+        "id": 14,
+        "name": "Laura",
+        "role": "friend",
+        "short_description": "Partenaire et amie de Nicky."
+      },
+      {
+        "id": 15,
+        "name": "Mammouth",
+        "role": "ennemi",
+        "short_description": "Un des criminels affrontant Nicky."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Goldorak",
+    "description": "Actarus, prince d'Euphor, combat les forces de Véga avec son robot géant Goldorak pour protéger la Terre.",
+    "nb_of_episodes": 74,
+    "nb_of_seasons": 1,
+    "genres": ["Science-fiction", "Action", "Mecha"],
+    "realisator": "Tomoharu Katsumata",
+    "author": "Go Nagai",
+    "ft_diffusion": "1975-10-05",
+    "personnages": [
+      {
+        "id": 16,
+        "name": "Actarus",
+        "role": "friend",
+        "short_description": "Prince d'Euphor pilotant Goldorak."
+      },
+      {
+        "id": 17,
+        "name": "Alcor",
+        "role": "friend",
+        "short_description": "Pilote et ami d'Actarus, cherchant à défendre la Terre."
+      },
+      {
+        "id": 18,
+        "name": "Minos",
+        "role": "ennemi",
+        "short_description": "Commandant des forces de Véga attaquant la Terre."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Albator 78",
+    "description": "Le capitaine Albator lutte contre les Sylvidres pour sauver l'humanité à bord de son vaisseau l'Atlantis.",
+    "nb_of_episodes": 42,
+    "nb_of_seasons": 1,
+    "genres": ["Science-fiction", "Aventure", "Action"],
+    "realisator": "Rintaro",
+    "author": "Leiji Matsumoto",
+    "ft_diffusion": "1978-03-14",
+    "personnages": [
+      {
+        "id": 19,
+        "name": "Albator",
+        "role": "friend",
+        "short_description": "Capitaine corsaire luttant contre les envahisseurs."
+      },
+      {
+        "id": 20,
+        "name": "Ramis",
+        "role": "friend",
+        "short_description": "Jeune garçon admirant Albator et aidant son équipage."
+      },
+      {
+        "id": 21,
+        "name": "Reine Sylvidra",
+        "role": "ennemi",
+        "short_description": "Chef des Sylvidres cherchant à envahir la Terre."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Les Chevaliers du Zodiaque",
+    "description": "Seiya et les Chevaliers de Bronze protègent la déesse Athéna contre les forces du mal.",
+    "nb_of_episodes": 114,
+    "nb_of_seasons": 3,
+    "genres": ["Action", "Aventure", "Fantasy"],
+    "realisator": "Kozo Morishita",
+    "author": "Masami Kurumada",
+    "ft_diffusion": "1986-10-11",
+    "personnages": [
+      {
+        "id": 22,
+        "name": "Seiya",
+        "role": "friend",
+        "short_description": "Chevalier de Pégase, courageux et déterminé."
+      },
+      {
+        "id": 23,
+        "name": "Shiryû",
+        "role": "friend",
+        "short_description": "Chevalier du Dragon, puissant et loyal."
+      },
+      {
+        "id": 24,
+        "name": "Saga des Gémeaux",
+        "role": "ennemi",
+        "short_description": "Ancien Grand Pope aux deux personnalités."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Jayce et les Conquérants de la Lumière",
+    "description": "Jayce lutte contre les Monstroplantes pour retrouver son père et sauver l'univers.",
+    "nb_of_episodes": 65,
+    "nb_of_seasons": 1,
+    "genres": ["Science-fiction", "Aventure", "Action"],
+    "realisator": "Jean Chalopin",
+    "author": "Jean Chalopin",
+    "ft_diffusion": "1985-09-16",
+    "personnages": [
+      {
+        "id": 25,
+        "name": "Jayce",
+        "role": "friend",
+        "short_description": "Héros en quête de son père et du salut de l'univers."
+      },
+      {
+        "id": 26,
+        "name": "Gillian",
+        "role": "friend",
+        "short_description": "Sage magicien et conseiller de Jayce."
+      },
+      {
+        "id": 27,
+        "name": "Diskor",
+        "role": "ennemi",
+        "short_description": "Leader des Monstroplantes, ennemi juré de Jayce."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Inspecteur Gadget",
+    "description": "Un inspecteur maladroit mais équipé de gadgets lutte contre le Dr Gang et son organisation MAD.",
+    "nb_of_episodes": 86,
+    "nb_of_seasons": 2,
+    "genres": ["Comédie", "Aventure", "Policier"],
+    "realisator": "Bruno Bianchi",
+    "author": "Jean Chalopin",
+    "ft_diffusion": "1983-09-10",
+    "personnages": [
+      {
+        "id": 28,
+        "name": "Inspecteur Gadget",
+        "role": "friend",
+        "short_description": "Détective maladroit doté de gadgets incroyables."
+      },
+      {
+        "id": 29,
+        "name": "Sophie",
+        "role": "friend",
+        "short_description": "Nièce de Gadget, elle résout souvent les enquêtes."
+      },
+      {
+        "id": 30,
+        "name": "Dr Gang",
+        "role": "ennemi",
+        "short_description": "Chef mystérieux de l'organisation MAD."
+      }
+    ]
+  }
+]
