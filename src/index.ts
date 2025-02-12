@@ -1,8 +1,13 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
-import { getCartoons, getOneCartoonsById } from "./resolvers/cartoons.resolver";
+import {
+  getCartoons,
+  getOneCartoonsById,
+  createCartoon,
+} from "./resolvers/cartoons.resolver";
 import { typeDef as Cartoon } from "./schema/cartoons.schema";
+import { typeDef as Personnage } from "./schema/personnages.schema";
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -12,6 +17,10 @@ const typeDefs = `#graphql
 
   # This "Cartoon" type defines the queryable fields for every cartoon in our data source.
   type Cartoon ${Cartoon}
+  type Personnage ${Personnage}
+
+  input PersonnageInput ${Personnage}
+
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
@@ -19,6 +28,10 @@ const typeDefs = `#graphql
   type Query {
     getCartoons: [Cartoon],
     getOneCartoonsById(id: ID!): Cartoon,
+  }
+
+  type Mutation {
+    createCartoon(name: String, description: String, nb_of_episodes: Int, nb_of_seasons: Int, genres: [String], realisator: String, author: String, ft_diffusion: String, personnages: [PersonnageInput]): Int
   }
 `;
 
@@ -28,6 +41,9 @@ const resolvers = {
   Query: {
     getCartoons,
     getOneCartoonsById,
+  },
+  Mutation: {
+    createCartoon,
   },
 };
 
