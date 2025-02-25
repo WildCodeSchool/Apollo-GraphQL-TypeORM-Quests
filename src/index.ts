@@ -5,9 +5,16 @@ import {
   getCartoons,
   getOneCartoonsById,
   createCartoon,
+  deleteCartoon,
 } from "./resolvers/cartoons.resolver";
-import { typeDef as Cartoon } from "./schema/cartoons.schema";
-import { typeDef as Personnage } from "./schema/personnages.schema";
+import {
+  typeDef as Cartoon,
+  inputDef as CartoonInput,
+} from "./schema/cartoons.schema";
+import {
+  typeDef as Personnage,
+  inputDef as PersonnageInput,
+} from "./schema/personnages.schema";
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -19,8 +26,8 @@ const typeDefs = `#graphql
   type Cartoon ${Cartoon}
   type Personnage ${Personnage}
 
-  input PersonnageInput ${Personnage}
-
+  input PersonnageInput ${PersonnageInput}
+  input CartoonInput ${CartoonInput}
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
@@ -31,7 +38,8 @@ const typeDefs = `#graphql
   }
 
   type Mutation {
-    createCartoon(name: String, description: String, nb_of_episodes: Int, nb_of_seasons: Int, genres: [String], realisator: String, author: String, ft_diffusion: String, personnages: [PersonnageInput]): Int
+    createCartoon(cartoon: CartoonInput): Int,
+    deleteCartoon(id: ID!): Boolean
   }
 `;
 
@@ -44,6 +52,7 @@ const resolvers = {
   },
   Mutation: {
     createCartoon,
+    deleteCartoon,
   },
 };
 
