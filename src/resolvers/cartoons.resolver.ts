@@ -16,25 +16,13 @@ export const getOneCartoonsById = (
   return cartoons.find((cartoon) => cartoon.id === +args.id) as Cartoon;
 };
 
-export const createCartoon = (
-  _: unknown,
-  args: { name: string; description: string }
-): number => {
+export const createCartoon = (_: unknown, args: Cartoon): number => {
   const id = cartoons[cartoons.length - 1].id + 1;
-  const { name, description } = args;
   const newCartoon: Cartoon = {
+    ...args,
     id,
-    name,
-    description,
-    nb_of_episodes: 0,
-    nb_of_seasons: 0,
-    genres: undefined,
-    realisator: "",
-    author: "",
-    ft_diffusion: "",
-    personnages: undefined,
   };
-  console.log(newCartoon);
-  // cartoons.push(newCartoon);
+
+  cartoons.push(newCartoon);
   return id;
 };
