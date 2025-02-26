@@ -37,11 +37,9 @@ export const createCartoon = (
 };
 
 export const deleteCartoon = (_: unknown, args: { id: string }): boolean => {
-  console.log(args);
   const index = cartoons.findIndex((cartoon) => cartoon.id === +args.id);
   if (index > 0) {
     cartoons.splice(index, 1);
-    console.log(cartoons);
     return true;
   }
   return false;
