@@ -1,45 +1,63 @@
-import { Cartoon } from "../types/cartoons.type";
-import { default as cartoons } from "../../dataset.json";
+import { Cartoon } from "../entities/cartoon.entities";
+import { Personnage } from "../entities/personnage.entities";
+import { Genre } from "../entities/genres.entities";
+import { DeleteResult } from "typeorm";
 
-export const getCartoons = (): Cartoon[] => {
-  return cartoons;
+export const getCartoons = async (): Promise<Cartoon[]> => {
+  return await Cartoon.find();
 };
 
 type GetOneCartoonByIdArgs = {
   id: string;
 };
 
-export const getOneCartoonsById = (
+export const getOneCartoonsById = async (
   _: unknown,
   args: GetOneCartoonByIdArgs
-): Cartoon => {
-  return cartoons.find((cartoon) => cartoon.id === +args.id) as Cartoon;
+): Promise<Cartoon> => {
+  return (await Cartoon.findOneBy({ id: +args.id })) as Cartoon;
 };
 
-export const createCartoon = (
+export const createCartoon = async (
   _: unknown,
   args: { cartoon: Cartoon }
-): number => {
-  const id = cartoons[cartoons.length - 1].id + 1;
-  const { personnages, ...rest } = args.cartoon;
-  const newPersonnages = personnages.map((pers) => ({
-    ...pers,
-    id: Date.now(),
-  }));
-  const newCartoon: Cartoon = {
-    ...rest,
-    personnages: newPersonnages,
-    id,
-  };
+): Promise<Number> => {
+  const { personnages, genres, ...rest } = args.cartoon;
 
-  cartoons.push(newCartoon);
-  return id;
+  /** Création du tableau d'instance de personnage */
+  const newPersonnages = personnages?.map((pers) => {
+    const myPers = new Personnage();
+    myPers.name = pers.name;
+    myPers.short_description = pers.short_description;
+    myPers.role = pers.role;
+
+    return myPers;
+  }) as Personnage[];
+
+  /** Création du tableau d'instance de genre */
+  const newGenre = genres?.map((genre) => {
+    const myGr = new Genre();
+    myGr.name = genre.name;
+
+    return myGr;
+  }) as Genre[];
+
+  /** Association des données et instances à */
+  const newCartoon: Cartoon = new Cartoon();
+  Object.assign(newCartoon, rest);
+  newCartoon.personnages = newPersonnages;
+  newCartoon.genres = newGenre;
+
+  const result = await newCartoon.save();
+  return result.id;
 };
 
-export const deleteCartoon = (_: unknown, args: { id: string }): boolean => {
-  const index = cartoons.findIndex((cartoon) => cartoon.id === +args.id);
-  if (index > 0) {
-    cartoons.splice(index, 1);
+export const deleteCartoon = async (
+  _: unknown,
+  args: { id: string }
+): Promise<boolean> => {
+  const result: DeleteResult = await Cartoon.delete({ id: +args.id });
+  if (result.affected && result.affected > 1) {
     return true;
   }
   return false;

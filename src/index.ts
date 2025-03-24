@@ -1,5 +1,7 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
+import "reflect-metadata";
+import { dataSource } from "./client";
 
 import {
   getCartoons,
@@ -68,6 +70,7 @@ const server = new ApolloServer({
 //  2. installs your ApolloServer instance as middleware
 //  3. prepares your app to handle incoming requests
 (async () => {
+  await dataSource.initialize();
   const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
   });
