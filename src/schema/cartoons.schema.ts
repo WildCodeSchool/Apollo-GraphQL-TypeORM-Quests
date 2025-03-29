@@ -4,7 +4,7 @@ export const typeDef = `{
     description: String
     nb_of_episodes: Int
     nb_of_seasons: Int
-    genres: [String]
+    genres: [Genre]
     realisator: String
     author: String
     ft_diffusion: String
@@ -16,7 +16,7 @@ export const inputDef = `{
     description: String
     nb_of_episodes: Int
     nb_of_seasons: Int
-    genres: [String]
+    genres: [GenreIntput]
     realisator: String
     author: String
     ft_diffusion: String

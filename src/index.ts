@@ -18,6 +18,11 @@ import {
   inputDef as PersonnageInput,
 } from "./schema/personnages.schema";
 
+import {
+  typeDef as Genre,
+  inputDef as GenreInput,
+} from "./schema/genre.schema";
+
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
 // your data.
@@ -27,9 +32,11 @@ const typeDefs = `#graphql
   # This "Cartoon" type defines the queryable fields for every cartoon in our data source.
   type Cartoon ${Cartoon}
   type Personnage ${Personnage}
+  type Genre ${Genre}
 
   input PersonnageInput ${PersonnageInput}
   input CartoonInput ${CartoonInput}
+  input GenreInput ${GenreInput}
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
