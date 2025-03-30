@@ -21,7 +21,7 @@ import {
 import {
   typeDef as Genre,
   inputDef as GenreInput,
-} from "./schema/genre.schema";
+} from "./schema/genres.schema";
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
